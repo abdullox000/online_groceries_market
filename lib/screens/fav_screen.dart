@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:online_groceries_market/utils/app_colors.dart';
+import 'package:online_groceries_market/utils/app_media.dart';
 
 class FavScreen extends StatelessWidget {
   const FavScreen({super.key});
@@ -9,14 +11,14 @@ class FavScreen extends StatelessWidget {
     return Scaffold(
       body: SafeArea(
         child: SingleChildScrollView(
-          child: 
+          child:
         Column(
           children: [
             SizedBox(width: 1000,),
             Text(
               "Favorurite",
               style: TextStyle(
-                color: Color(0xFF181725),
+                color: AppColor.blackColor,
                 fontSize: 20,
                 fontFamily: "Gilroy"
               ),
@@ -24,35 +26,35 @@ class FavScreen extends StatelessWidget {
             SizedBox(height: 20,),
             Divider(),
             buildFavItoms(
-              image: "assets/images/sprite.png",
+              image: AppMedia.spriteImagePath,
               text: "Sprite Can",
               price: "\$1.50",
               text2: "325ml, Price",
             ),
             Divider(),
             buildFavItoms(
-              image: "assets/images/dietcola.png",
+              image: AppMedia.dietcolaImagePath,
               text: "Diet Coke",
               price: "\$1.99",
               text2: "355ml, Price"
             ),
             Divider(),
             buildFavItoms(
-              image: "assets/images/apple.png",
+              image: AppMedia.appleImagePath,
               text: "Apple & Grape Juice",
               price: "\$15.50",
               text2: "2L, Price"
             ),
             Divider(),
             buildFavItoms(
-              image: "assets/images/cola.jpg",
+              image: AppMedia.colaImagePath,
               text: "Coca Cola Can",
               price: "\$4.99",
               text2: "325ml, Price"
             ),
             Divider(),
             buildFavItoms(
-              image: "assets/images/pepsi.png",
+              image: AppMedia.pepseImagePath,
               text: "Pepsi Can",
               price: "\$4.99",
               text2: "330ml, Price"
@@ -85,7 +87,7 @@ class FavScreen extends StatelessWidget {
                     Text(
                       text,
                       style: TextStyle(
-                        color: Color(0xFF181725),
+                        color: AppColor.blackColor,
                         fontSize: 16,
                         fontFamily: "Gilroy"
                       ),
@@ -94,7 +96,7 @@ class FavScreen extends StatelessWidget {
                       text2,
                       style: TextStyle(
                         fontSize: 14,
-                        color: Color(0xFF7C7C7C),
+                        color: AppColor.greyColor,
                         fontFamily: "Gilroy-Medium.ttf"
                       ),
                     )
@@ -106,7 +108,7 @@ class FavScreen extends StatelessWidget {
                   style: TextStyle(
                     fontFamily: "Gilroy",
                     fontSize: 16,
-                    color: Color(0xFF181725),
+                    color: AppColor.blackColor,
                   ),
                 ),
                 SizedBox(width: 10,),
@@ -125,7 +127,7 @@ InkWell buildLogOutButton() {
         padding: EdgeInsets.symmetric(horizontal: 16),
         height: 70,
         decoration: BoxDecoration(
-          color: Color(0xFFF2F3F2),
+          color: AppColor.whiteColor,
           borderRadius: BorderRadius.circular(20),
         ),
         child: Row(
@@ -136,7 +138,7 @@ InkWell buildLogOutButton() {
               style: TextStyle(
                 fontSize: 18,
                 fontFamily: "Gilroy",
-                color: Color(0xFF53B175),
+                color: AppColor.mainColor,
               ),
             ),
           ],

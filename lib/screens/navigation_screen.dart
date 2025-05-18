@@ -7,6 +7,8 @@ import 'package:online_groceries_market/screens/explore_screen.dart';
 import 'package:online_groceries_market/screens/fav_screen.dart';
 import 'package:online_groceries_market/screens/profile_screen.dart';
 import 'package:online_groceries_market/screens/shop_screen.dart';
+import 'package:online_groceries_market/utils/app_colors.dart';
+import 'package:online_groceries_market/utils/app_media.dart';
 
 class NavigationScreen extends StatefulWidget {
   const NavigationScreen({super.key});
@@ -38,8 +40,8 @@ class _NavigationScreenState extends State<NavigationScreen> {
             selectectedIndex = value;
           });
         },
-        selectedItemColor: Color(0xFF53B175),
-        unselectedItemColor: Color(0xFF181725),
+        selectedItemColor: AppColor.mainColor,
+        unselectedItemColor: AppColor.blackColor,
         showUnselectedLabels: true,
         showSelectedLabels: true,
         currentIndex: selectectedIndex,
@@ -47,16 +49,16 @@ class _NavigationScreenState extends State<NavigationScreen> {
           BottomNavigationBarItem(
             label: "Shop",
             icon: SvgPicture.asset(
-              "assets/svgs/home.svg",
+              AppMedia.homeSvgPath,
               color:
-                  selectectedIndex == 0 ? Color(0xFF53B175) : Color(0xFF181725),
+                  selectectedIndex == 0 ? AppColor.mainColor : AppColor.blackColor,
             ),
           ),
           BottomNavigationBarItem(
             icon: SvgPicture.asset(
-              "assets/svgs/explore.svg",
+              AppMedia.exploreSvgPath,
               color:
-                  selectectedIndex == 1 ? Color(0xFF53B175) : Color(0xFF181725),
+                  selectectedIndex == 1 ? AppColor.mainColor : AppColor.blackColor,
             ),
 
             label: "Explore",
@@ -65,25 +67,25 @@ class _NavigationScreenState extends State<NavigationScreen> {
             label: "Cart",
 
             icon: SvgPicture.asset(
-              "assets/svgs/cart.svg",
+              AppMedia.cartSvgPath,
 
               color:
-                  selectectedIndex == 2 ? Color(0xFF53B175) : Color(0xFF181725),
+                  selectectedIndex == 2 ? AppColor.mainColor : AppColor.blackColor,
             ),
           ),
           BottomNavigationBarItem(
             icon: SvgPicture.asset(
-              "assets/svgs/favorite.svg",
+              AppMedia.favoriteSvgPath,
               color:
-                  selectectedIndex == 3 ? Color(0xFF53B175) : Color(0xFF181725),
+                  selectectedIndex == 3 ? AppColor.mainColor : AppColor.blackColor,
             ),
             label: "Favorite",
           ),
           BottomNavigationBarItem(
             icon: SvgPicture.asset(
-              "assets/svgs/profile.svg",
+              AppMedia.profileSvgPath,
               color:
-                  selectectedIndex == 4 ? Color(0xFF53B175) : Color(0xFF181725),
+                  selectectedIndex == 4 ? AppColor.mainColor : AppColor.blackColor,
             ),
             label: "Profile",
           ),

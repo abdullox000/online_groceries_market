@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:online_groceries_market/extensions/context_ext.dart';
+import 'package:online_groceries_market/utils/app_media.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
@@ -12,7 +13,7 @@ class LoginScreen extends StatelessWidget {
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Image.asset("assets/images/login_1.jpg"),
+          Image.asset(AppMedia.loginImagePath),
           SizedBox(height: 20),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 25),
@@ -34,7 +35,7 @@ class LoginScreen extends StatelessWidget {
                     child: Row(
                       spacing: 20,
                       children: [
-                        Image.asset("assets/images/flag.jpg"),
+                        Image.asset(AppMedia.flagImagePath),
                         Text("+880"),
                       ],
                     ),
@@ -53,13 +54,13 @@ class LoginScreen extends StatelessWidget {
                 ),
                 SizedBox(height: 50),
                 buildLoginWithSocialMedia(
-                  svgPath: "assets/svgs/google.svg",
+                  svgPath: AppMedia.googleSvgPath,
                   text: "Continue with Google",
                   color: Color(0xFF5383EC),
                 ),
                 SizedBox(height: 20),
                 buildLoginWithSocialMedia(
-                  svgPath: "assets/svgs/meta.svg",
+                  svgPath: AppMedia.metaSvgPath,
                   text: "Continue with Facebook",
                   color: Color(0xFF4A66AC),
                 ),

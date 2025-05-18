@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:online_groceries_market/screens/onboarding_screen.dart';
+import 'package:online_groceries_market/utils/app_colors.dart';
+import 'package:online_groceries_market/utils/app_media.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -25,14 +27,14 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xFF53B175),
+      backgroundColor: AppColor.mainColor,
       body: Center(
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           spacing: 15,
           children: [
-            SvgPicture.asset("assets/svgs/logo.svg", height: 50, width: 50),
+            SvgPicture.asset(AppMedia.logoSvgPath, height: 50, width: 50),
             Column(
               spacing: 0,
               crossAxisAlignment: CrossAxisAlignment.start,

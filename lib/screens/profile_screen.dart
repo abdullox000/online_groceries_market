@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:online_groceries_market/utils/app_colors.dart';
+import 'package:online_groceries_market/utils/app_media.dart';
 
 class ProfileScreen extends StatelessWidget {
   const ProfileScreen({super.key});
@@ -16,42 +18,42 @@ class ProfileScreen extends StatelessWidget {
             SizedBox(height: 30),
             Divider(),
             buildProfileItem(
-              iconPath: "assets/svgs/birnarsa.svg",
+              iconPath: AppMedia.birnarsaSvgPath,
               text: "Orders",
               onTap: () {},
             ),
             buildProfileItem(
-              iconPath: "assets/svgs/mydetalias.svg",
+              iconPath: AppMedia.mydetaliasSvgPath,
               text: "My Detalis",
               onTap: () {},
             ),
             buildProfileItem(
-              iconPath: "assets/svgs/delicry.svg",
+              iconPath: AppMedia.delicrySvgPath,
               text: "Deliver Address",
               onTap: () {},
             ),
             buildProfileItem(
-              iconPath: "assets/svgs/vectors.svg",
+              iconPath: AppMedia.vectorsSvgPath,
               text: "Payment Methods",
               onTap: () {},
             ),
             buildProfileItem(
-              iconPath: "assets/svgs/promo.svg",
+              iconPath: AppMedia.promoSvgPath,
               text: "Promo Cord",
               onTap: () {},
             ),
             buildProfileItem(
-              iconPath: "assets/svgs/Notifecations.svg",
+              iconPath: AppMedia.notifecationsSvgPath,
               text: "Notifecations",
               onTap: () {},
             ),
             buildProfileItem(
-              iconPath: "assets/svgs/help.svg",
+              iconPath: AppMedia.helpSvgPath,
               text: "Help",
               onTap: () {},
             ),
             buildProfileItem(
-              iconPath: "assets/svgs/About.svg",
+              iconPath: AppMedia.aboutSvgPath,
               text: "About",
               onTap: () {},
             ),
@@ -72,19 +74,19 @@ class ProfileScreen extends StatelessWidget {
         padding: EdgeInsets.symmetric(horizontal: 16),
         height: 70,
         decoration: BoxDecoration(
-          color: Color(0xFFF2F3F2),
+          color: AppColor.whiteColor,
           borderRadius: BorderRadius.circular(20),
         ),
         child: Row(
           children: [
-            Icon(Icons.logout, color: Color(0xFF53B175), size: 20),
+            Icon(Icons.logout, color: AppColor.mainColor, size: 20),
             SizedBox(width: 110),
             Text(
               "Log out",
               style: TextStyle(
                 fontSize: 18,
                 fontFamily: "Gilroy",
-                color: Color(0xFF53B175),
+                color: AppColor.mainColor,
               ),
             ),
           ],
@@ -100,7 +102,7 @@ class ProfileScreen extends StatelessWidget {
         children: [
           CircleAvatar(
             radius: 40,
-            child: Image.asset("assets/images/dino.jpg"),
+            child: Image.asset(AppMedia.dinozavrImagePath),
           ),
           SizedBox(width: 20),
           Column(
@@ -118,13 +120,13 @@ class ProfileScreen extends StatelessWidget {
                   ),
                   IconButton(
                     onPressed: () {},
-                    icon: Icon(Icons.edit, size: 15, color: Color(0xFF53B175)),
+                    icon: Icon(Icons.edit, size: 15, color: AppColor.mainColor),
                   ),
                 ],
               ),
               Text(
                 "dino@gmail.com",
-                style: TextStyle(fontSize: 16, color: Color(0xFF7C7C7C)),
+                style: TextStyle(fontSize: 16, color: AppColor.greyColor),
               ),
             ],
           ),
@@ -154,7 +156,7 @@ InkWell buildProfileItem({
                 style: TextStyle(
                   fontSize: 18,
                   fontFamily: "Gilroy",
-                  color: Color(0xFF181725),
+                  color: AppColor.blackColor,
                 ),
               ),
               Spacer(),

@@ -2,7 +2,9 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:online_groceries_market/extensions/context_ext.dart';
-import 'package:online_groceries_market/screens/login_screen.dart';
+import 'package:online_groceries_market/screens/navigation_screen.dart';
+import 'package:online_groceries_market/utils/app_colors.dart';
+import 'package:online_groceries_market/utils/app_media.dart';
 
 class OnboardingScreen extends StatelessWidget {
   const OnboardingScreen({super.key});
@@ -14,7 +16,7 @@ class OnboardingScreen extends StatelessWidget {
         alignment: Alignment.center,
         children: [
           Image.asset(
-            "assets/images/azizbek.jpg",
+            AppMedia.azizbekImagePath,
             width: context.getScreenWidth(),
             height: context.getScreenHeight(),
             fit: BoxFit.cover,
@@ -32,8 +34,8 @@ class OnboardingScreen extends StatelessWidget {
                   begin: Alignment.topCenter,
                   end: Alignment.bottomCenter,
                   colors: [
-                    Color(0xFF0E1727).withOpacity(0),
-                    Color(0xFF858585).withOpacity(0.5),
+                    AppColor.blackColor.withOpacity(0),
+                    AppColor.greyyColor.withOpacity(0.5),
                   ],
                 ),
               ),
@@ -42,7 +44,7 @@ class OnboardingScreen extends StatelessWidget {
           Positioned(
             bottom: context.getScreenHeight() * 0.39,
             child: SvgPicture.asset(
-              "assets/svgs/logo.svg",
+              AppMedia.logoSvgPath,
               width: 48,
               height: 56,
             ),
@@ -83,14 +85,14 @@ class OnboardingScreen extends StatelessWidget {
               onTap: () {
                 Navigator.pushReplacement(
                   context,
-                  CupertinoPageRoute(builder: (context) => LoginScreen()),
+                  CupertinoPageRoute(builder: (context) => NavigationScreen()),
                 );
               },
               child: Container(
                 alignment: Alignment.center,
                 height: 60,
                 decoration: BoxDecoration(
-                  color: Color(0xFF53B175),
+                  color: AppColor.mainColor,
                   borderRadius: BorderRadius.circular(20),
                 ),
                 child: Text(
