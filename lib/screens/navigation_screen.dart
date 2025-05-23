@@ -18,7 +18,7 @@ class NavigationScreen extends StatefulWidget {
 }
 
 class _NavigationScreenState extends State<NavigationScreen> {
-  int selectectedIndex = 4;
+  int selectectedIndex = 0;
 
   List<Widget> screens = [
     ShopScreen(),

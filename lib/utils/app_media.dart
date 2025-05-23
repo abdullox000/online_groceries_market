@@ -20,6 +20,13 @@ class AppMedia {
   static final String flagImagePath = "$_baseImagePath/flag.jpg";
   static final String azizbekImagePath = "$_baseImagePath/azizbek.jpg";
   static final String dinozavrImagePath = "$_baseImagePath/dino.jpg";
+  static final String sabziImagePath = "$_baseImagePath/sabzi.png";
+  static final String sabzavotImagePath = "$_baseImagePath/sabzavot.png";
+  static final String otImagePath = "$_baseImagePath/ot.png";
+  static final String rasmImagePath = "$_baseImagePath/rasm.png";
+  static final String olmaImagePath = "$_baseImagePath/pngfuel 1.png";
+  static final String goshImagePath = "$_baseImagePath/gosh.png";
+  static final String tovuqImagePath = "$_baseImagePath/tovuq.png";
 
   // Svgs
   static final String _baseSvgPath = "assets/svgs";
@@ -39,5 +46,6 @@ class AppMedia {
   static final String notifecationsSvgPath = "$_baseSvgPath/Notifecations.svg";
   static final String helpSvgPath = "$_baseSvgPath/help.svg";
   static final String aboutSvgPath = "$_baseSvgPath/About.svg";
+  static final String arrowSvgPath = "$_baseSvgPath/arrow.svg";
   
 }
